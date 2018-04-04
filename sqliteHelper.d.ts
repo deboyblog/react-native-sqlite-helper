@@ -39,5 +39,9 @@ export default class SQLite {
                   columns: string[] | '*',
                   condition: object | null,
                   pagination?: number,
-                  perPageNum?: number) => Result;
+                  perPageNum?: number,
+                  orderBy?: string) => Result;
+    count: (tableName: string, 
+               condition: object | null,
+    ) => Result;
 }
